@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <div class="container-fluid p-0">
+            <div class="container header">
+                <header>
+                    <div class="container">
+                        <div class="navbar__wrap">
+                            <div class="hamb">
+                                <div class="hamb__field" id="hamb">
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                </div>
+                            </div>
+                            <a href="#" class="logo" id="logo">Мебель</a>
+                            <ul class="menu" id="menu">
+                                <li><a href="#top">О нас</a></li>
+                                <li><a href="#form-name">Подать заявку</a></li>
+                                <li>
+                                    <form action="show.php" method="POST">
+                                        <input type="submit" value="Показать заказы" name="Show">
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+                <div class="popup" id="popup"></div>
+            </div>
+        </div>
+        <div class="container-fluid p-0 line">
+            <img src="line.jpg" alt="Текстура дерева">
+        </div>
+        <div class="container mt-5" id="top">
+            <div class="row top-row">
+                <div class="col-7">
+                    <img src="furniture.jpg" alt="Набор мебели" width="100%">
+                </div>
+                <div class="col-4 top-col">
+                    <div class="row h1"><span>Мебель</span></div>
+                    <div class="row h5">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quos, placeat, aliquam corporis omnis itaque nihil debitis maxime fuga impedit, tempora deserunt laborum corrupti odit doloribus modi nemo voluptas veniam.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="container form-name" id="form-name">
+                <span>Подать заявку</span>
+            </div>
+            <div class="container form">
+                <div class="form-wrapper">
+                    <form action="send_order.php" method="post" id="order">
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" name="name" id="name" value="">
+                            <div class="error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="surname">Фамилия</label>
+                            <input type="surname" name="surname" id="surname" value="">
+                            <div class="error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Обращение</label>
+                            <textarea type="message" name="message" id="message" value=""></textarea>
+                            <div class="error"></div>
+                        </div>
+                        <div class="form-group">
+                            <div name="checkbox">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="chair" name="order[]" value="1">
+                                    <label for="chair">Стул</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="table" name="order[]" value="2">
+                                    <label for="table">Стол</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="other" name="order[]" value="3">
+                                    <label for="other">Прочее</label>
+                                </div>
+                            </div>
+                            <div class="error"></div>
+                        </div>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="consent" name="consent" value="1">
+                            <label for="chair">Согласие на обаботку персональных данных</label>
+                            <div class="error"></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Отправить</button>
+                            <div class="error"></div>
+                        </div>
+                    </form>
+                    <div class="result">
+                        <div class="result__text">Форма успешно отправлена!</div>
+                        <div class="result_ok"></div>
+                        <button type="button" class="result__close">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0 mt-5 footer line">
+            <img src="line.jpg" alt="Текстура дерева">
+            <div class="container-fluid footer-background">
+                <div class="container footer-text">
+                    <span>Сайт разработан Дмитриченко Д. А. для ГАУ РХ «ЦИНТ Хакасии»</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="send_order.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>
